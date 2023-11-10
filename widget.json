@@ -6,5 +6,5 @@
     "element": "<Cobrowse-widget-react></Cobrowse-widget-react>",
     "icon": "neo-icon-sort",
     "files": ["/dist/Widget.js"],
-    "override_url": "https://your-url.lab.bravishma.com/"
+    "override_url": "https://cobrowse-widget.lab.bravishma.com/"
 }
