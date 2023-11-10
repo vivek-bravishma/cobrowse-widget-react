@@ -12,4 +12,4 @@ class widgetComp extends HTMLElement {
     }
 }
 
-customElements.define('Cobrowse', widgetComp);
+customElements.define('Cobrowse-widget-react', widgetComp);

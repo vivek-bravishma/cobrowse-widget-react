@@ -1,9 +1,9 @@
 {
-    "name": "cobrowse-widget",
-    "description": "change this description according to your project",
-    "tags": ["replace", "this", "array", "with", "your", "project", "related", "tags"],
+    "name": "cobrowse-widget-react",
+    "description": "agent cobrowse widget",
+    "tags": ["cobrowse", "react", "agent"],
     "version": "1.0.0",
-    "element": "<Cobrowse></Cobrowse>",
+    "element": "<Cobrowse-widget-react></Cobrowse-widget-react>",
     "icon": "neo-icon-sort",
     "files": ["/dist/Widget.js"],
     "override_url": "https://your-url.lab.bravishma.com/"
