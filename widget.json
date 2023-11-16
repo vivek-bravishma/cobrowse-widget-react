@@ -3,7 +3,7 @@
     "description": "agent cobrowse widget",
     "tags": ["cobrowse", "react", "agent"],
     "version": "1.0.0",
-    "element": "<Cobrowse-widget-react></Cobrowse-widget-react>",
+    "element": "<cobrowse-widget-react></cobrowse-widget-react>",
     "icon": "neo-icon-sort",
     "files": ["/dist/Widget.js"],
     "override_url": "https://cobrowse-widget.lab.bravishma.com/"
