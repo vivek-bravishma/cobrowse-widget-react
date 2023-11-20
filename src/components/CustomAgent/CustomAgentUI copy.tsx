@@ -11,7 +11,6 @@ import {
 import CobrowseAPI from 'cobrowse-agent-sdk';
 // import Stopwatch from '../Stopwatch';
 import './CustomAgentUI.css';
-import AgentShare from '../AgentShare';
 
 const cobrowse = new CobrowseAPI();
 
@@ -145,7 +144,7 @@ export default function CustomAgentUI(props) {
         );
     }
 
-    // if (session?.state === 'ended') return <div>The custom agent UI session has ended!</div>;
+    if (session?.state === 'ended') return <div>The custom agent UI session has ended!</div>;
 
     return (
         <div className='CustomAgentUI'>
@@ -161,9 +160,8 @@ export default function CustomAgentUI(props) {
                     // src={`${props.api}/connect?filter_cobrowseio_demo_id=${props.demoId}&token=${props.token}&end_action=none&agent_tools=none&device_controls=none&session_details=none&popout=none&messages=none`}
                     src={`${props.api}/connect?token=${props.token}&end_action=none&agent_tools=none&device_controls=none&session_details=none&popout=none&messages=none`}
                 />
-                {/* {renderControls()} */}
+                {renderControls()}
             </div>
-            <AgentShare />
         </div>
     );
 }
