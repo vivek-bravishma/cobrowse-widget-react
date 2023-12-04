@@ -5,3 +5,22 @@
     display: flex;
     flex-direction: column;
 }
+
+.cobrowse-widget-container {
+    width: 100%;
+    height: 100%;
+    /* background: red; */
+    /* padding: 5px; */
+    /* display: flex;
+    flex-flow: column;
+    gap: 0.5rem; */
+    overflow: auto;
+}
+
+button:disabled {
+    cursor: not-allowed;
+}
+
+button {
+    cursor: pointer;
+}
