@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 // import { Icon } from '@avaya/neo-react';
 import './style.css';
+import { useWidgetApi } from '../../contexts/WidgetApiContext';
 
 type formOptionType = {
     value: string;
@@ -38,6 +39,9 @@ const Form = () => {
     const sendCobrowseUrlSMSToCustomer = () => {
         console.log('sending sms');
     };
+
+    const widgetAPI = useWidgetApi();
+    console.log('Widget api =====================> ', widgetAPI);
 
     return (
         <div className='sendCoBroOuterContainer'>
