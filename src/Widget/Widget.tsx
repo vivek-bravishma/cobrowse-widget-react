@@ -6,7 +6,7 @@ class widgetComp extends HTMLElement {
     connectedCallback() {
         const interactionId = this.getAttribute('interactionid');
         console.log('interaction ID ===================> ', interactionId);
-        render(createElement(Cobrowse), this);
+        render(createElement(Cobrowse, { interactionId }), this);
     }
 
     disconnectedCallback() {
