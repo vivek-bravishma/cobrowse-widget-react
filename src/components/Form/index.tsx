@@ -9,6 +9,8 @@ type formOptionType = {
 };
 
 const Form = () => {
+    const { widgetApi, interactionId } = useWidgetApi();
+
     const formOptions = [
         { value: '', text: 'Choose an option' },
         { value: 'https://lab.bravishma.com:6510', text: 'Update mobile number' },
@@ -31,17 +33,16 @@ const Form = () => {
         }
     };
 
-    // const sendCobrowseUrlToCustomer = () => {
-    //     widgetAPI.sendChatMessage(selectedForm.value);
-    //     // console.log(this.urlname);
-    // };
+    const sendCobrowseUrlToCustomer = () => {
+        if (selectedForm.value) {
+            console.log('Sending URL in Chat Message to the user');
+            widgetApi?.sendChatMessage(selectedForm.value);
+        }
+    };
 
     const sendCobrowseUrlSMSToCustomer = () => {
         console.log('sending sms');
     };
-
-    const widgetAPI = useWidgetApi();
-    console.log('Widget api =====================> ', widgetAPI);
 
     return (
         <div className='sendCoBroOuterContainer'>
@@ -71,13 +72,18 @@ const Form = () => {
                     <p>Description: {selectedForm.text}</p>
                 </div>
                 <div className='sendFormUrlBtnContr'>
-                    <button className='cobro-url-form-btn'>
+                    <button
+                        className='cobro-url-form-btn'
+                        onClick={sendCobrowseUrlToCustomer}
+                        disabled={selectedForm.value === ''}
+                    >
                         <span className='neo-icon-send'></span>
                         Send Co-browse URL
                     </button>
                     <button
                         className='cobro-url-form-btn '
                         // onClick={sendCobrowseUrlSMSToCustomer}
+                        disabled={selectedForm.value === ''}
                     >
                         <span className='neo-icon-send'></span>
                         Send Co-browse URL SMS

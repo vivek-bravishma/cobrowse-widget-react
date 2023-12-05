@@ -5,7 +5,7 @@ import '@avaya/neo-react/avaya-neo-react.css';
 function App() {
     return (
         <div className='App'>
-            <Cobrowse />
+            <Cobrowse interactionId='placeHolderInteractionID' />
         </div>
     );
 }

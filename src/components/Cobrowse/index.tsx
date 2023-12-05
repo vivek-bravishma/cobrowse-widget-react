@@ -12,12 +12,10 @@ const api = 'https://cobrowse.io/dashboard';
 const token = CONFIG.agentToken;
 
 function Cobrowse({ interactionId }) {
-    console.log('<===============================================> ');
-    console.log('interaction id from cobro component=============> ', interactionId);
     // return <CustomAgentUI token={token} demoId={demoId} api={api} />;
     // return <CustomAgentUI token={token} api={api} />;
     return (
-        <WidgetApiProvider>
+        <WidgetApiProvider interactionId={interactionId}>
             <div className='cobrowse-widget-container'>
                 <CustomAgentUI token={token} api={api} />
                 <AgentShare />
