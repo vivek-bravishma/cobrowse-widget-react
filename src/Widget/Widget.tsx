@@ -4,6 +4,8 @@ import Cobrowse from '../components/Cobrowse';
 
 class widgetComp extends HTMLElement {
     connectedCallback() {
+        const interactionId = this.getAttribute('interactionid');
+        console.log('interaction ID ===================> ', interactionId);
         render(createElement(Cobrowse), this);
     }
 
