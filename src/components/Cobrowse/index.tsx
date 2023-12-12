@@ -5,6 +5,7 @@ import CustomAgentUI from '../CustomAgent/CustomAgentUI';
 import Form from '../Form';
 import AgentShare from '../AgentShare';
 import WidgetApiProvider from '../../contexts/WidgetApiContext';
+import AgentShare2 from '../AgentShare copy';
 
 // const api = 'https://cobrowse.io';
 const api = 'https://cobrowse.io/dashboard';
@@ -18,7 +19,8 @@ function Cobrowse({ interactionId }) {
         <WidgetApiProvider interactionId={interactionId}>
             <div className='cobrowse-widget-container'>
                 <CustomAgentUI token={token} api={api} />
-                <AgentShare />
+                {/* <AgentShare /> */}
+                <AgentShare2 />
                 <Form />
             </div>
         </WidgetApiProvider>

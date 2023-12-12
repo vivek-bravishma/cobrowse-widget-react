@@ -22,7 +22,7 @@ const Form = () => {
 
     const handleSelectFormChange = (event) => {
         let selectedOption = formOptions.find((ele) => ele.value === event.target.value);
-        console.log('s o====> ', selectedOption);
+        // console.log('s o====> ', selectedOption);
         if (selectedOption) setSelectedForm(selectedOption);
     };
 

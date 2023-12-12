@@ -59,7 +59,7 @@ const AgentShare = () => {
                 .then(async (data) => {
                     setSession(data);
                     // console.log('session==> ', session?.id);
-                    console.log('data==> ', data.id);
+                    // console.log('data==> ', data.id);
 
                     const viewerToken = await generateViewerJWT(licenseKey, data.id);
 
@@ -183,7 +183,8 @@ const AgentShare = () => {
                 .setIssuer(license)
                 .setSubject('viewer@cobrowse.io')
                 .setAudience('https://cobrowse.io')
-                .setExpirationTime('30m') // Choose your own expiration time
+                // .setExpirationTime('30m') // Choose your own expiration time
+                .setExpirationTime('1m') // Choose your own expiration time
                 .sign(privateKey);
 
             return jwt;
