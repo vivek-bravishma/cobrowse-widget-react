@@ -42,6 +42,8 @@ const Form = () => {
 
     const sendCobrowseUrlSMSToCustomer = () => {
         console.log('sending sms');
+        let interData = widgetApi?.getInteractionData();
+        console.log('getInteractionData=======> ', interData);
     };
 
     return (
@@ -82,8 +84,8 @@ const Form = () => {
                     </button>
                     <button
                         className='cobro-url-form-btn '
-                        // onClick={sendCobrowseUrlSMSToCustomer}
-                        disabled={selectedForm.value === ''}
+                        onClick={sendCobrowseUrlSMSToCustomer}
+                        // disabled={selectedForm.value === ''}
                     >
                         <span className='neo-icon-send'></span>
                         Send Co-browse URL SMS
