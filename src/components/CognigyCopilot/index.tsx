@@ -272,11 +272,14 @@ const CognigyCopilot = () => {
         //     type: '[Interaction] Update',
         // };
 
-        // console.log('--->', JSON.parse(interData?.intrinsics?.ENGAGEMENT_PARAMETERS).urlToken);
+        let ENGAGEMENT_PARAMETERS = interData?.intrinsics?.ENGAGEMENT_PARAMETERS;
 
-        setUrlToken(JSON.parse(interData?.intrinsics?.ENGAGEMENT_PARAMETERS)?.urlToken);
-        setUserId(JSON.parse(interData?.intrinsics?.ENGAGEMENT_PARAMETERS)?.userId);
-        setSessionId(JSON.parse(interData?.intrinsics?.ENGAGEMENT_PARAMETERS)?.sessionId);
+        console.log('--->', ENGAGEMENT_PARAMETERS);
+        if (ENGAGEMENT_PARAMETERS) {
+            setUrlToken(JSON.parse(ENGAGEMENT_PARAMETERS)?.urlToken);
+            setUserId(JSON.parse(ENGAGEMENT_PARAMETERS)?.userId);
+            setSessionId(JSON.parse(ENGAGEMENT_PARAMETERS)?.sessionId);
+        }
     }, []);
 
     return (
