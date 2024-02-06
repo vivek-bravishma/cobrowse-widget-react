@@ -25,7 +25,7 @@ function Cobrowse({ interactionId }) {
                 <AgentShare2 />
                 <Form />
                 {/* <Temp /> */}
-                <CognigyCopilot />
+                {/* <CognigyCopilot /> */}
             </div>
         </WidgetApiProvider>
     );
