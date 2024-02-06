@@ -13,9 +13,18 @@ const Form = () => {
 
     const formOptions = [
         { value: '', text: 'Choose an option' },
-        { value: 'https://lab.bravishma.com:6510', text: 'Update mobile number' },
-        { value: 'https://lab.bravishma.com:6508', text: 'Update address details' },
-        { value: 'https://lab.bravishma.com:6507', text: 'Update email address' },
+        {
+            value: 'https://cobrowsingservice.lab.bravishma.com/mobile',
+            text: 'Update mobile number',
+        },
+        {
+            value: 'https://cobrowsingservice.lab.bravishma.com/address',
+            text: 'Update address details',
+        },
+        {
+            value: 'https://cobrowsingservice.lab.bravishma.com/email',
+            text: 'Update email address',
+        },
     ];
 
     const [selectedForm, setSelectedForm] = useState<formOptionType>(formOptions[0]);
