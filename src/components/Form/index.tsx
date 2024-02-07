@@ -25,6 +25,10 @@ const Form = () => {
             value: 'https://cobrowsingservice.lab.bravishma.com/email',
             text: 'Update email address',
         },
+        {
+            value: 'https://cobrowsingservice.lab.bravishma.com/course',
+            text: 'Course Registration',
+        },
     ];
 
     const [selectedForm, setSelectedForm] = useState<formOptionType>(formOptions[0]);
